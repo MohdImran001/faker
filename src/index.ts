@@ -1,4 +1,5 @@
 import { Datatype } from './datatype';
+import { Fake } from './fake';
 import { Mersenne } from './mersenne';
 import { Random } from './random';
 
@@ -151,6 +152,7 @@ export class Faker {
 
   seedValue?: any[] | any;
 
+  readonly fake: Fake['fake'] = new Fake(this).fake;
   readonly mersenne: Mersenne = new Mersenne();
   random: Random = new Random(this);
   datatype: Datatype = new Datatype(this);
